@@ -1,3 +1,16 @@
+SELECT table_schema, table_name,column_name,data_type, collation_name
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE table_schema = 'oes' AND TABLE_NAME='products'; 
+-- this up here is how we proceed to have meta-data information about other data. it will only return collation_name for varchar columns.
+
+
+
+
+
+-- ------------------------------------------------------------ --
+
+
+
 -- CHALLENGE ONE
 
 SELECT first_name,last_name
