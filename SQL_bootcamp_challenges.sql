@@ -11,6 +11,21 @@ COLLATE utf8mb4_0900_as_cs;
 -- this up here will return the rows matching the condition considering the case sensitive collation
 
 
+
+SELECT product_id, product_name
+FROM products
+WHERE product_name LIKE '%tablet%';  
+
+-- [here, we are returning all the string sets containing the word tablet in them]
+-- [the % sign is a wildcard which represents zero or more characters]
+
+
+
+
+
+
+
+
 -- ------------------------------------------------------------ --
 
 
