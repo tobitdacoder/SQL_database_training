@@ -13,3 +13,8 @@ SELECT last_name AS customer_last_name,city
 FROM hcm.employees;
 
 -- here e are using the AS keyword to return a renamed field.
+
+-- CHALLENGE THREE
+
+SELECT *
+FROM oes.order_items;
