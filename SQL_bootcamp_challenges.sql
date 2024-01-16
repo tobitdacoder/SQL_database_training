@@ -18,3 +18,4 @@ FROM hcm.employees;
 
 SELECT *
 FROM oes.order_items;
+-- this * specifies that we want to return all the columns in the table
