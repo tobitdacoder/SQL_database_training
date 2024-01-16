@@ -4,7 +4,11 @@ WHERE table_schema = 'oes' AND TABLE_NAME='products';
 -- this up here is how we proceed to have meta-data information about other data. it will only return collation_name for varchar columns.
 
 
-
+SELECT product_id,product_name
+FROM products
+WHERE product_name='USB hub'
+COLLATE utf8mb4_0900_as_cs; 
+-- this up here will return the rows matching the condition considering the case sensitive collation
 
 
 -- ------------------------------------------------------------ --
