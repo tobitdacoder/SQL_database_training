@@ -20,7 +20,12 @@ WHERE product_name LIKE '%tablet%';
 -- [the % sign is a wildcard which represents zero or more characters]
 
 
+-- NOW WE ARE LEARNING HOW TO USE THE DIFFERENT AGGREGATE FUNCTIONS WITHIN MySQL
 
+SELECT 
+   MIN(prop_price) AS minimum_prop_price
+FROM properties; 
+-- this 👆🏽 will return the MINIMUM or smallest numerical number in the prop_price column, in other word the MINIMUM price property
 
 
 
