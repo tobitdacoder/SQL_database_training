@@ -76,7 +76,11 @@ SELECT first_name,last_name,employee_id
 FROM hcm.employees
 ORDER BY last_name ASC; -- this will order in ASCENDING order of alphabet letters.
 
+-- CHALLENGE HEIGHT
 
+SELECT first_name,last_name,employee_id,salary
+FROM hcm.employees
+ORDER BY salary DESC;	-- FROM higher salary to lower one. here you can see that we specified DESC.	
 
 
 
