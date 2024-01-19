@@ -114,8 +114,12 @@ FROM oes.orders
 WHERE shipped_date IS NULL; -- here we are simply returning all the orders which are not yet shipped (where the shipped date is unknown)
 
 
+-- CHALLENGE THIRTEEN
 
-
+SELECT *
+FROM oes.orders
+WHERE order_date = "20200226"; -- [This is 2020-02-26]
+-- here we are basically filtering. only return the rows having date qual to 20200226.
 
 
 
