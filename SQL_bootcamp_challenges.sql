@@ -96,7 +96,11 @@ FROM hcm.employees
 ORDER BY salary DESC
 LIMIT 10; -- only 10 records will be returned since we specified the limit. that is by using the LIMIT clause.
 
+-- CHALLENGE ELEVEN
 
+SELECT *
+FROM oes.products
+WHERE list_price > 100; -- this where here comes in to FILTER the data before to return it. Using the WHERE clause.
 
 
 
