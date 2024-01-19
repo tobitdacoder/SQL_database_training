@@ -107,6 +107,11 @@ FROM oes.products
 WHERE list_price >= 100
 ORDER BY list_price DESC; -- here we are just justifying the order in which the result will be retrieved.
 
+-- CHALLENGE TWELVE
+
+SELECT *
+FROM oes.orders
+WHERE shipped_date IS NULL; -- here we are simply returning all the orders which are not yet shipped (where the shipped date is unknown)
 
 
 
