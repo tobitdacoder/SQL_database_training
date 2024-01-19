@@ -82,7 +82,12 @@ SELECT first_name,last_name,employee_id,salary
 FROM hcm.employees
 ORDER BY salary DESC;	-- FROM higher salary to lower one. here you can see that we specified DESC.	
 
+-- CHALLENGE NINE
 
+SELECT first_name,last_name,employee_id,hire_date
+FROM hcm.employees
+ORDER BY hire_date DESC, employee_id ASC;
+-- here we are now ordering using two column, so that we can do a two level ordering.
 
 
 
