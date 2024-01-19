@@ -62,3 +62,31 @@ FROM oes.order_items;
 SELECT DISTINCT locality
 FROM bird.antarctic_populations;
 -- this will basically return all the localities (distinct localities), and that is done by using the DISTINCT clause.
+
+-- CHALLENGE SIX
+
+SELECT employee_id,first_name,hire_date
+FROM hcm.employees
+ORDER BY hire_date DESC; -- this will make sure to order from the most rescent hired employee to the less recent one.
+						 -- here, later dates are greater dates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
