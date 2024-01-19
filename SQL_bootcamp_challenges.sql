@@ -102,6 +102,10 @@ SELECT *
 FROM oes.products
 WHERE list_price > 100; -- this where here comes in to FILTER the data before to return it. Using the WHERE clause.
 
+SELECT *
+FROM oes.products
+WHERE list_price >= 100
+ORDER BY list_price DESC; -- here we are just justifying the order in which the result will be retrieved.
 
 
 
