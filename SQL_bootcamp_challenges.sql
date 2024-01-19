@@ -89,6 +89,13 @@ FROM hcm.employees
 ORDER BY hire_date DESC, employee_id ASC;
 -- here we are now ordering using two column, so that we can do a two level ordering.
 
+-- CHALLENGE TEN
+
+SELECT *
+FROM hcm.employees
+ORDER BY salary DESC
+LIMIT 10; -- only 10 records will be returned since we specified the limit. that is by using the LIMIT clause.
+
 
 
 
