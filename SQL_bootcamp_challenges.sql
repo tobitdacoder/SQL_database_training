@@ -70,7 +70,11 @@ FROM hcm.employees
 ORDER BY hire_date DESC; -- this will make sure to order from the most rescent hired employee to the less recent one.
 						 -- here, later dates are greater dates.
 
+-- CHALLENGE SEVEN
 
+SELECT first_name,last_name,employee_id
+FROM hcm.employees
+ORDER BY last_name ASC; -- this will order in ASCENDING order of alphabet letters.
 
 
 
