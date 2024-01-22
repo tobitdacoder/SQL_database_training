@@ -27,8 +27,11 @@ SELECT
 FROM properties; 
 -- this 👆🏽 will return the MINIMUM or smallest numerical number in the prop_price column, in other word the MINIMUM price property
 
+-- TO CHECK THE DATATYPES AND THE META DATA OF THE DATA, PROCEED BY USING THIS QUERY
 
-
+-- SELECT table_schema,table_name,column_name,data_type,collation_name
+-- FROM INFORMATION_SCHEMA.COLUMNS
+-- WHERE table_schema='oes' AND TABLE_NAME='countries'; 
 
 
 -- ------------------------------------------------------------ --
