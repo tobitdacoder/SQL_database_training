@@ -138,5 +138,14 @@ WHERE product_name = 'usb hub';
 -- same thing here we are filtering the rows.
 
 
+-- CHALLENGE FIFTEEN:
+
+
+SELECT *
+FROM hcm.countries
+WHERE country_name LIKE 'N%';
+-- This will return all the country_names which start with N.
+
+
 
 
