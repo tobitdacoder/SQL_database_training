@@ -147,5 +147,10 @@ WHERE country_name LIKE 'N%';
 -- This will return all the country_names which start with N.
 
 
+-- CHALLENGE SIXTEEN:
 
+SELECT *
+FROM oes.customers
+WHERE email LIKE '%@gmail.com';
+-- here by writing this, we are telling the query to return rows with a record that ends with @gmail.com
 
