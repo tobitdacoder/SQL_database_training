@@ -132,7 +132,10 @@ FROM oes.orders
 WHERE order_date >= "20200101";
 -- LATER DATES ARE GREATER DATES, Here we are seeing how to use the WHERE clause to filter the rows.
 
-
+SELECT *
+FROM products
+WHERE product_name = 'usb hub';
+-- same thing here we are filtering the rows.
 
 
 
