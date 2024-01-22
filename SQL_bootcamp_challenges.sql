@@ -154,3 +154,14 @@ FROM oes.customers
 WHERE email LIKE '%@gmail.com';
 -- here by writing this, we are telling the query to return rows with a record that ends with @gmail.com
 
+
+-- EXERCICE on the Logical query Processing Order:
+
+-- Write a query that returns the average price for product categories that have an average price greater
+-- than $20. Exclude any products which have a category of “unassigned”. Order the query result by average.
+
+SELECT category, AVG(price) AS average_price
+FROM products
+WHERE category != “unassigned”
+GROUP BY category
+HAVING AVG(price)>20;
