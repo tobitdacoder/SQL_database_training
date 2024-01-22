@@ -122,6 +122,13 @@ WHERE order_date = "20200226"; -- [This is 2020-02-26]
 -- here we are basically filtering. only return the rows having date qual to 20200226.
 
 
+-- CHALLENGE FOURTEEN
+
+SELECT *
+FROM oes.orders
+WHERE order_date >= "20200101";
+-- LATER DATES ARE GREATER DATES, Here we are seeing how to use the WHERE clause to filter the rows.
+
 
 
 
