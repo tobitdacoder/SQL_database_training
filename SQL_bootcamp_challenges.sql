@@ -155,6 +155,14 @@ WHERE email LIKE '%@gmail.com';
 -- here by writing this, we are telling the query to return rows with a record that ends with @gmail.com
 
 
+-- CHALLENGE SEVENTEEN:
+
+SELECT department_id, COUNT(*) AS employee_number_per_dep
+FROM hcm.employees
+GROUP BY department_id;
+-- here we are asked to return the number of employees per department.
+
+
 -- EXERCICE on the Logical query Processing Order:
 
 -- Write a query that returns the average price for product categories that have an average price greater
