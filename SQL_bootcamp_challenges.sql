@@ -172,3 +172,14 @@ SELECT property_id,COUNT(*) AS owner_count
 FROM properties
 GROUP BY property_id
 HAVING COUNT(*)  > 1;
+
+-- We can also group by multiple columns
+
+SELECT prop_zone,occupied, SUM(area_sqm) AS total_area_sqm
+FROM properties
+GROUP BY prop_zone,occupied;
+
+-- [this will return the count of the different combinations;
+-- so this GROUP BY helps us grouping based on a column or combination 
+-- of two or more columns], the AGGREGATE FUNCTION ignores all the NULL 
+-- values(does not consider them).
