@@ -179,7 +179,12 @@ FROM hcm.employees
 GROUP BY department_id
 ORDER BY AVG(salary) DESC;
 
+-- CHALLENGE NINETEEN:
 
+SELECT warehouse_id, SUM(quantity_on_hand) AS total_number_of_products
+FROM oes.inventories
+GROUP BY warehouse_id
+HAVING total_number_of_products > 5000;
 
 
 -- EXERCICE on the Logical query Processing Order:
