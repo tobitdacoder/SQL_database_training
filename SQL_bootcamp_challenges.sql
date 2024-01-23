@@ -163,6 +163,18 @@ GROUP BY department_id;
 -- here we are asked to return the number of employees per department.
 
 
+-- CHALLENGE EIGHTEEN:
+
+SELECT department_id, AVG(salary) AS average_salary
+FROM hcm.employees
+GROUP BY department_id
+ORDER BY average_salary DESC;
+
+-- here we are asked to return the average salary per department, from highest to lowest.
+
+
+
+
 -- EXERCICE on the Logical query Processing Order:
 
 -- Write a query that returns the average price for product categories that have an average price greater
