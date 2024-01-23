@@ -186,6 +186,9 @@ FROM oes.inventories
 GROUP BY warehouse_id
 HAVING total_number_of_products > 5000;
 
+-- basically, here we are asked to return the total number of the product in hand in each warehouse
+-- Here we are not focusing on the different types of products (we just want to know how many products,
+-- all types combined, that are in each warehouse, grouping, based on the product_id).
 
 -- EXERCICE on the Logical query Processing Order:
 
