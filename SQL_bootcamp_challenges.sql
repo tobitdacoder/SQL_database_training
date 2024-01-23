@@ -179,6 +179,14 @@ FROM hcm.employees
 GROUP BY department_id
 ORDER BY AVG(salary) DESC;
 
+-- we can also ROUBD the salary by using the ROUND function and specifying the round level
+
+SELECT department_id, ROUND(AVG(salary),1) AS average_salary
+FROM hcm.employees
+GROUP BY department_id
+ORDER BY average_salary DESC;
+
+
 -- CHALLENGE NINETEEN:
 
 SELECT warehouse_id, SUM(quantity_on_hand) AS total_number_of_products
