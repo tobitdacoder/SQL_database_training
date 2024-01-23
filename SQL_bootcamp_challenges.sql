@@ -190,6 +190,16 @@ HAVING total_number_of_products > 5000;
 -- Here we are not focusing on the different types of products (we just want to know how many products,
 -- all types combined, that are in each warehouse, grouping, based on the product_id).
 
+
+-- CHALLENGE TWENTY:
+
+SELECT locality, MAX(date_of_count) AS latest_date_of_count
+FROM bird.antarctic_populations
+GROUP BY locality;
+
+-- here we are basically returning the latest date at which the species count have been made in each locality.
+
+
 -- EXERCICE on the Logical query Processing Order:
 
 -- Write a query that returns the average price for product categories that have an average price greater
