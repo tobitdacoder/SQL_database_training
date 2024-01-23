@@ -165,3 +165,10 @@ FROM products
 WHERE category != “unassigned”
 GROUP BY category
 HAVING AVG(price)>20;
+
+--  Task: return the owner count for the properties which have more than one owner:
+
+SELECT property_id,COUNT(*) AS owner_count
+FROM properties
+GROUP BY property_id
+HAVING COUNT(*)  > 1;
