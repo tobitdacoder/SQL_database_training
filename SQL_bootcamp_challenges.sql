@@ -196,9 +196,15 @@ HAVING total_number_of_products > 5000;
 SELECT locality, MAX(date_of_count) AS latest_date_of_count
 FROM bird.antarctic_populations
 GROUP BY locality;
-
 -- here we are basically returning the latest date at which the species count have been made in each locality.
 
+
+-- CHALLENGE TWENTY-ONE:
+
+SELECT locality, species_id, MAX(date_of_count) AS latest_date_of_count
+FROM bird.antarctic_populations
+GROUP BY locality, species_id;
+-- Now we are returning the latest count done for each species at each locality (here we are grouping by combining two columns)
 
 -- EXERCICE on the Logical query Processing Order:
 
