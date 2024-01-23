@@ -172,6 +172,13 @@ ORDER BY average_salary DESC;
 
 -- here we are asked to return the average salary per department, from highest to lowest.
 
+-- we can also use the AVG aggregate function inside the ORDER BY clause.Like this:
+
+SELECT department_id, AVG(salary) AS average_salary
+FROM hcm.employees
+GROUP BY department_id
+ORDER BY AVG(salary) DESC;
+
 
 
 
