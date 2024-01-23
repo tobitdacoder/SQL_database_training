@@ -183,3 +183,14 @@ GROUP BY prop_zone,occupied;
 -- so this GROUP BY helps us grouping based on a column or combination 
 -- of two or more columns], the AGGREGATE FUNCTION ignores all the NULL 
 -- values(does not consider them).
+
+
+-- Let us do the count of properties by the occupied column 
+-- (in other words, we will group by occupied column
+
+SELECT occupied, COUNT(*) AS number_of_properties
+FROM properties
+GROUP BY occupied;
+
+-- here we are returning the number of properties that are occupied, 
+-- and the number of them which are not occupied
