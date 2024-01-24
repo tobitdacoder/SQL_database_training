@@ -50,7 +50,10 @@ FROM hotel_rooms
 WHERE Room_Style='Single' OR  Window_View='Ocean'
 COLLATE utf8mb4_0900_ai_ci;
 
--- 
+-- Here we are basically using the OR operator and here the rows that 
+-- will be returned are the ones which fulfill one of the conditions
+ -- imposed by the 0R operator. If one of them is TRUE or both are TRUE, 
+ -- then the final answer is TRUE and they will be returned.
 
 
 
