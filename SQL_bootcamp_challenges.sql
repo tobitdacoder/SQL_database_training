@@ -33,6 +33,24 @@ FROM properties;
 -- FROM INFORMATION_SCHEMA.COLUMNS
 -- WHERE table_schema='oes' AND TABLE_NAME='countries'; 
 
+-- AND operator:
+
+SELECT *
+FROM hotel_rooms
+WHERE Room_Style='Single' AND  Window_View='Ocean'
+COLLATE utf8mb4_0900_ai_ci;
+-- here we are using the OR operator for the first time
+-- and we use it to return only the rows which satisfies 
+-- two conditions at the same time
+
+
+
+
+
+
+
+
+
 
 -- ------------------------------------------------------------ --
 
