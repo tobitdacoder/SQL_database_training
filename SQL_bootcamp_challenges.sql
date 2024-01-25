@@ -274,6 +274,19 @@ WHERE city = 'Sydney' AND salary > 200000;
 -- here we are filtering again using the AND operator;
 
 
+-- CHALLENGE TWENTY-FIVE: (on logical operators):
+
+SELECT *
+FROM hcm.employees
+WHERE (city= 'Seattle' OR city = 'Sydney') AND hire_date >= '20190101'
+ORDER BY hire_date DESC;
+-- here we are using the AND and the OR operatyors, but here we are using the precedence logic.
+
+
+
+
+
+
 -- EXERCICE on the Logical query Processing Order:
 
 -- Write a query that returns the average price for product categories that have an average price greater
