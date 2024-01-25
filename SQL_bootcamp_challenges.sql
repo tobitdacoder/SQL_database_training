@@ -257,8 +257,13 @@ WHERE city = 'Seattle' OR city= 'Sydney';
 -- Here we are now using the OR operator.
 
 
+-- CHALLENGE TWENTY-THREE: (on logical operators)
 
+SELECT *
+FROM hcm.employees
+WHERE city IN ('Seattle','Sydney','Ascot','Hillston');
 
+-- here we are now using the IN operator to filter specific rows based on a set
 
 
 
