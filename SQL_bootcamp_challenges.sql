@@ -56,8 +56,15 @@ COLLATE utf8mb4_0900_ai_ci;
  -- then the final answer is TRUE and they will be returned.
 
 
+-- THE IN OPERATOR INTRO
 
+--SELECT  *
+--FROM table1
+--WHERE column1 IN (value1, value2, value3, …); 
 
+-- here we want to return all the column, with all the rows,
+-- from the table1, where the values in column1 are in this given 
+-- set inside the parentheses
 
 
 -- ------------------------------------------------------------ --
