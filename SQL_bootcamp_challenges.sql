@@ -266,6 +266,12 @@ WHERE city IN ('Seattle','Sydney','Ascot','Hillston');
 -- here we are now using the IN operator to filter specific rows based on a set
 
 
+-- CHALLENGE TWENTY-FOUR: (on logical operators):
+
+SELECT *
+FROM hcm.employees
+WHERE city = 'Sydney' AND salary > 200000;
+-- here we are filtering again using the AND operator;
 
 
 -- EXERCICE on the Logical query Processing Order:
