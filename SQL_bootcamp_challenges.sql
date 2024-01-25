@@ -247,6 +247,22 @@ FROM bird.antarctic_populations
 GROUP BY locality, species_id;
 -- Now we are returning the latest count done for each species at each locality (here we are grouping by combining two columns)
 
+
+-- CHALLENGE TWENTY-TWO: (on logical operators)
+
+SELECT *
+FROM hcm.employees
+WHERE city = 'Seattle' OR city= 'Sydney';
+
+-- Here we are now using the OR operator.
+
+
+
+
+
+
+
+
 -- EXERCICE on the Logical query Processing Order:
 
 -- Write a query that returns the average price for product categories that have an average price greater
