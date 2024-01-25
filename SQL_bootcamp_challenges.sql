@@ -273,16 +273,6 @@ FROM hcm.employees
 WHERE city = 'Sydney' AND salary > 200000;
 -- here we are filtering again using the AND operator;
 
--- OR 
-
-SELECT *
-FROM hcm.employees
-WHERE (city IN ('Sydney','Seattle')) AND hire_date >= '20190101'
-ORDER BY hire_date DESC;
-
-
-
-
 
 
 -- CHALLENGE TWENTY-FIVE: (on logical operators):
@@ -293,9 +283,20 @@ WHERE (city= 'Seattle' OR city = 'Sydney') AND hire_date >= '20190101'
 ORDER BY hire_date DESC;
 -- here we are using the AND and the OR operatyors, but here we are using the precedence logic.
 
+-- OR 
+
+SELECT *
+FROM hcm.employees
+WHERE (city IN ('Sydney','Seattle')) AND hire_date >= '20190101'
+ORDER BY hire_date DESC;
 
 
+-- CHALLENGE TWENTY-SIX: (on logical operators):
 
+SELECT *
+FROM oes.products
+WHERE category_id NOT IN (1,2,5);
+-- here we are retrieving again informations using both the NOT and the IN operators. 
 
 
 -- EXERCICE on the Logical query Processing Order:
