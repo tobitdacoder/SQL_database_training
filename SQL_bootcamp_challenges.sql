@@ -273,6 +273,17 @@ FROM hcm.employees
 WHERE city = 'Sydney' AND salary > 200000;
 -- here we are filtering again using the AND operator;
 
+-- OR 
+
+SELECT *
+FROM hcm.employees
+WHERE (city IN ('Sydney','Seattle')) AND hire_date >= '20190101'
+ORDER BY hire_date DESC;
+
+
+
+
+
 
 -- CHALLENGE TWENTY-FIVE: (on logical operators):
 
