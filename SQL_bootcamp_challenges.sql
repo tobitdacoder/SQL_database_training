@@ -104,7 +104,9 @@ SELECT d.dept_id, d.dept_name, e.emp_id, e.first_name
 FROM employees e RIGHT OUTER JOIN departments d
 ON d.dept_id = e.dept_id;
 
-
+-- Same logic as LEFT OUTER JOIN. Here the only difference is that all the rows in the table at the 
+-- RIGHT will be returned even if they are not matching with any row in the table at the LEFT, 
+-- the empty spaces will be filled with NULL.
 -- --------------------------------------------------------------
 
 
