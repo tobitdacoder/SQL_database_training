@@ -73,7 +73,11 @@ SELECT d.dept_id, d.dept_name, e.emp_id, e.first_name
 FROM departments d LEFT OUTER JOIN employees e
 ON d.dept_id = e.dept_id;
 
--- ------------------------------------------------------------ --
+-- Here we are using the LEFT OUTER JOIN keyword, and what this will do, is that it 
+-- will return ALL ROWS from the left hand side table, even then ones which do not have
+-- a match in the right table, will be preserved, BUT THE ONES IN THE RIGHT TABLE WHICH
+-- DO NOT HAVE A MATCH IN THE LEFT TABLE WILL NOT BE RETURNED
+-- --------------------------------------------------------------
 
 
 
