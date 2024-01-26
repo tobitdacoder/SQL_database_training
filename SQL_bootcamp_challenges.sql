@@ -79,9 +79,16 @@ ON d.dept_id = e.dept_id;
 -- DO NOT HAVE A MATCH IN THE LEFT TABLE WILL NOT BE RETURNED
 
 -- NOTE: here the rows which do not have a match in the right table will be returned and
--- the part of the second table that is empty will be filled with NULL place holders. Also 
--- if we want, in the query, we can place the table names in different lines, one above 
--- another and the result will be the same.
+-- the part of the second table that is empty will be filled with NULL place holders.
+
+-- Alsoif we want, in the query, we can place the table names in different lines, one above 
+-- another and the result will be the same. 
+-- LIKE THIS 👇🏽:
+
+SELECT d.dept_id, d.dept_name, e.emp_id, e.first_name
+FROM departments d 
+LEFT OUTER JOIN employees e
+ON d.dept_id = e.dept_id;
 -- --------------------------------------------------------------
 
 
