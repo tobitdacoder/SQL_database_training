@@ -89,6 +89,13 @@ SELECT d.dept_id, d.dept_name, e.emp_id, e.first_name
 FROM departments d 
 LEFT OUTER JOIN employees e
 ON d.dept_id = e.dept_id;
+
+
+-- NOTE: the 'OUTER' word is optional, so you can either write LEFT OUTER JOIN or LEFT JOIN, like this:
+
+SELECT d.dept_id, d.dept_name, e.emp_id, e.first_name
+FROM departments d LEFT JOIN employees e
+ON d.dept_id = e.dept_id;
 -- --------------------------------------------------------------
 
 
