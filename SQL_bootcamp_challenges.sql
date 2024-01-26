@@ -77,6 +77,11 @@ ON d.dept_id = e.dept_id;
 -- will return ALL ROWS from the left hand side table, even then ones which do not have
 -- a match in the right table, will be preserved, BUT THE ONES IN THE RIGHT TABLE WHICH
 -- DO NOT HAVE A MATCH IN THE LEFT TABLE WILL NOT BE RETURNED
+
+-- NOTE: here the rows which do not have a match in the right table will be returned and
+-- the part of the second table that is empty will be filled with NULL place holders. Also 
+-- if we want, in the query, we can place the table names in different lines, one above 
+-- another and the result will be the same.
 -- --------------------------------------------------------------
 
 
