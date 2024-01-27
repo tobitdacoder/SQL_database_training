@@ -94,7 +94,7 @@ ON d.dept_id = e.dept_id;
 -- NOTE: the 'OUTER' word is optional, so you can either write LEFT OUTER JOIN or LEFT JOIN, like this:
 
 SELECT d.dept_id, d.dept_name, e.emp_id, e.first_name
-FROM departments d LEFT JOIN employees e
+FROM departments d LEFT JOIN employees e  --[ here is where the renaming or the alias 'd' and 'e' are coming from, not in the select]
 ON d.dept_id = e.dept_id;
 
 
