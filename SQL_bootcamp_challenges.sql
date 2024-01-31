@@ -365,6 +365,7 @@ FROM hcm.employees e LEFT OUTER JOIN hcm.departments d
 ON e.department_id = d.department_id
 GROUP BY e.department_id;
 
+-- here is a new query where we are basically using the JOINS to return a specific number of data based on the JOINS that we made
 --==========================================================================================================
 
 -- EXERCICE on the Logical query Processing Order:
