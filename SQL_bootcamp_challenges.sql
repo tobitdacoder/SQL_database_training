@@ -347,6 +347,13 @@ FROM hcm.employees e INNER JOIN hcm.departments d
 ON e.department_id = d.department_id;
 
 
+-- CHALLENGE TWENTY-EIGHT: (on joins)
+
+SELECT e.employee_id, e.first_name, e.last_name, e.salary, d.department_name
+FROM hcm.employees e LEFT OUTER JOIN hcm.departments d
+ON e.department_id = d.department_id;
+
+
 
 --==========================================================================================================
 
