@@ -346,6 +346,7 @@ SELECT e.employee_id, e.first_name, e.last_name,e.salary, d.department_name
 FROM hcm.employees e INNER JOIN hcm.departments d 	
 ON e.department_id = d.department_id;
 
+-- here we are using an INNER JOIN and this will help us return ONLY the rows which matched in both tables.
 
 -- CHALLENGE TWENTY-EIGHT: (on joins)
 
