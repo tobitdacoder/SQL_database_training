@@ -339,6 +339,17 @@ WHERE category_id NOT IN (1,2,5);
 -- here we are retrieving again informations using both the NOT and the IN operators. 
 
 
+-- CHALLENGE TWENTY-SEVEN: (on joins)
+
+
+SELECT e.employee_id, e.first_name, e.last_name,e.salary, d.department_name
+FROM hcm.employees e INNER JOIN hcm.departments d 	
+ON e.department_id = d.department_id;
+
+
+
+--==========================================================================================================
+
 -- EXERCICE on the Logical query Processing Order:
 
 -- Write a query that returns the average price for product categories that have an average price greater
