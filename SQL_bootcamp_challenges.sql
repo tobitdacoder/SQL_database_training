@@ -358,6 +358,12 @@ ON e.department_id = d.department_id;
 -- but also the rows in the left table which did not match with an id in the second table.
 
 
+-- CHALLENGE TWENTY-NINE: (on joins)
+
+SELECT e.department_id, COUNT(e.employee_id),d.department_name 
+FROM hcm.employees e LEFT OUTER JOIN hcm.departments d
+ON e.department_id = d.department_id
+GROUP BY e.department_id;
 
 --==========================================================================================================
 
