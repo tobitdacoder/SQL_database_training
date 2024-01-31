@@ -353,6 +353,9 @@ SELECT e.employee_id, e.first_name, e.last_name, e.salary, d.department_name
 FROM hcm.employees e LEFT OUTER JOIN hcm.departments d
 ON e.department_id = d.department_id;
 
+-- here we are now using the LEFT OUTER JOIN which will later return all the linked rows,
+-- but also the rows in the left table which did not match with an id in the second table.
+
 
 
 --==========================================================================================================
