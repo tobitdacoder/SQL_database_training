@@ -408,7 +408,11 @@ GROUP BY occupied;
 -- here we are returning the number of properties that are occupied, 
 -- and the number of them which are not occupied
 
+-- COMPOSITE JOIN: Joining on multiple columns
 
 SELECT c.population, c.city, c.country, s.country, AS store_country, s.store_id, s.area_sqm
 FROM cities c INNER JOIN stores s
 ON c.city = s.city AND c.country = s.country;
+
+-- here we are now introducing to composite joins.
+-- This is when we re using multiple columns to get unique combinations
