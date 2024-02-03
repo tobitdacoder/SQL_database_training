@@ -416,3 +416,4 @@ ON c.city = s.city AND c.country = s.country;
 
 -- here we are now introducing to composite joins.
 -- This is when we re using multiple columns to get unique combinations
+-- this is because there is not any column with unique values in the table.
