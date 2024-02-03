@@ -308,8 +308,8 @@ WHERE city IN ('Seattle','Sydney','Ascot','Hillston');
 
 -- CHALLENGE TWENTY-FOUR: (on logical operators):
 
-SELECT *
-FROM hcm.employees
+SELECT * 
+FROM hcm.employees 
 WHERE city = 'Sydney' AND salary > 200000;
 -- here we are filtering again using the AND operator;
 
@@ -407,3 +407,8 @@ GROUP BY occupied;
 
 -- here we are returning the number of properties that are occupied, 
 -- and the number of them which are not occupied
+
+
+SELECT c.population, c.city, c.country, s.country, AS store_country, s.store_id, s.area_sqm
+FROM cities c INNER JOIN stores s
+ON c.city = s.city AND c.country = s.country;
