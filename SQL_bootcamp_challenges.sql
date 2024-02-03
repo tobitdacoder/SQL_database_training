@@ -417,3 +417,20 @@ ON c.city = s.city AND c.country = s.country;
 -- here we are now introducing to composite joins.
 -- This is when we re using multiple columns to get unique combinations
 -- this is because there is not any column with unique values in the table.
+
+
+
+SELECT d.doc_id, d.doc_last_name, p.patient_id, p.last_name
+FROM doctor d 
+INNER JOIN doctor_patient dp 
+ON d.doc_id = dp.doc_id 
+INNER JOIN patients p 
+ON dp.patient_id = p.patient_id;
+
+
+
+
+
+
+
+
