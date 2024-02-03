@@ -419,6 +419,8 @@ ON c.city = s.city AND c.country = s.country;
 -- this is because there is not any column with unique values in the table.
 
 
+-- JOIN MORE THAN TWO TABLES: 
+-- Here we are going to join those three tables using this query there:
 
 SELECT d.doc_id, d.doc_last_name, p.patient_id, p.last_name
 FROM doctor d 
