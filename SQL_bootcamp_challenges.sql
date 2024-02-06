@@ -437,6 +437,12 @@ this is for a many to many relationship.
 */
 
 
+-- now let us join the three tables while we have added a new doctor in the doctor table:
+-- Note that this doctor has not patient assigned to him:
+
+
+
+
 
 
 
