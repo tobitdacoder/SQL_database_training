@@ -440,6 +440,13 @@ this is for a many to many relationship.
 -- now let us join the three tables while we have added a new doctor in the doctor table:
 -- Note that this doctor has not patient assigned to him:
 
+SELECT d.doc_id, d.doc_last_name, p.patient_id, p.last_name
+FROM doctor d 
+LEFT OUTER JOIN doctor_patient dp 
+ON d.doc_id = dp.doc_id 
+LEFT OUTER JOIN patients p 
+ON dp.patient_id = p.patient_id;
+
 
 
 
