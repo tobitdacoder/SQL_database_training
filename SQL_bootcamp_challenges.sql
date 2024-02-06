@@ -429,7 +429,12 @@ ON d.doc_id = dp.doc_id
 INNER JOIN patients p 
 ON dp.patient_id = p.patient_id;
 
-
+/*
+ What is happening here is that we are first joining the first two tables using the doc_id PK
+Then, a new table will be created, then we automatically join that new table with the patient
+table using an inner join on dp.patient_id = p.patient_id
+this is for a many to many relationship.
+*/
 
 
 
