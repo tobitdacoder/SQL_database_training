@@ -447,6 +447,12 @@ ON d.doc_id = dp.doc_id
 LEFT OUTER JOIN patients p 
 ON dp.patient_id = p.patient_id;
 
+/*
+here is how we do, we add two LEFT OUTER JOIN to retrieve
+ all the rows in the doctor table, even the ones which 
+ does not satisfy the condition.
+*/
+
 
 
 
