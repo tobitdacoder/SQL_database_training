@@ -453,6 +453,7 @@ here is how we do, we add two LEFT OUTER JOIN to retrieve
  does not satisfy the condition.
 */
 
+-- NOW LET US INTRODUCE THE SELF-REFERENCING JOIN:
 
 
 
