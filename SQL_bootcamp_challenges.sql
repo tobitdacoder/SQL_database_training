@@ -455,7 +455,9 @@ here is how we do, we add two LEFT OUTER JOIN to retrieve
 
 -- NOW LET US INTRODUCE THE SELF-REFERENCING JOIN:
 
-
+SELECT e.employee_id, e.first_name, e.job_title, e2.first_name AS manager_name, e2.job_title AS manager_name
+FROM employees e INNER JOIN employees e2
+ON e.manager_id = e2.employee_id;
 
 
 
