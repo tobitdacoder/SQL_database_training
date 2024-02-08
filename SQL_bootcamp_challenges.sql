@@ -459,6 +459,10 @@ SELECT e.employee_id, e.first_name, e.job_title, e2.first_name AS manager_name, 
 FROM employees e INNER JOIN employees e2
 ON e.manager_id = e2.employee_id;
 
+-- here, since in our table we had the managers as employees too, we used self referencing by duplicating the table, and then join the 
+-- two identic tables, joining them where the employee_id in the first table  is equal to the managers_id in the second table, what this will do
+-- is that it will return a joined table where each employee have his managers name and job title.
+
 
 
 
