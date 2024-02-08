@@ -465,7 +465,11 @@ ON e.manager_id = e2.employee_id;
 
 -- HERE IS HOW WE CAN DO IT, USING THE LEFT OUTER JOIN IN ORDER TO SHOW THAT THE CEO Judy DOES NOT HAVE A MANAGER.
 
+SELECT e.employee_id, e.first_name, e.job_title, e2.first_name AS manager_name, e2.job_title AS manager_name
+FROM employees e LEFT OUTER JOIN employees e2
+ON e.manager_id = e2.employee_id;
 
+-- here we are now using the LEFT OUTER JOIN to return even the rows in the left table that does noot have maching employee_id in the second table.
 
 
 
