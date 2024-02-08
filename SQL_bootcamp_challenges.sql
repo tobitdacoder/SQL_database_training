@@ -463,6 +463,10 @@ ON e.manager_id = e2.employee_id;
 -- two identic tables, joining them where the employee_id in the first table  is equal to the managers_id in the second table, what this will do
 -- is that it will return a joined table where each employee have his managers name and job title.
 
+-- HERE IS HOW WE CAN DO IT, USING THE LEFT OUTER JOIN IN ORDER TO SHOW THAT THE CEO Judy DOES NOT HAVE A MANAGER.
+
+
+
 
 
 
