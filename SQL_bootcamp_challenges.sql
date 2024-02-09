@@ -383,6 +383,10 @@ SELECT p.product_id, p.product_name, w.warehouse_id, w.warehouse_name, inv.quant
 FROM oes.products p INNER JOIN oes.inventories inv ON p.product_id = inv.product_id INNER JOIN oes.warehouses w ON inv.warehouse_id = w.warehouse_id
 WHERE w.warehouse_name is not NULL;
 
+/*
+   We are basically linking three tables using the INNER JOIN. make sure to undrstand what is going on after the FROM clause.
+*/
+
 
 
 
