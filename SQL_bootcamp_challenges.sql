@@ -366,7 +366,17 @@ ON e.department_id = d.department_id
 GROUP BY e.department_id;
 
 -- here is a new query where we are basically using the JOINS to return a specific number of data based on the JOINS that we made
+
+-- CHALLENGE THIRTY: (on joins):
+
+
+
+
 --==========================================================================================================
+
+
+
+
 
 -- EXERCICE on the Logical query Processing Order:
 
@@ -423,11 +433,7 @@ ON c.city = s.city AND c.country = s.country;
 -- Here we are going to join those three tables using this query there:
 
 SELECT d.doc_id, d.doc_last_name, p.patient_id, p.last_name
-FROM doctor d 
-INNER JOIN doctor_patient dp 
-ON d.doc_id = dp.doc_id 
-INNER JOIN patients p 
-ON dp.patient_id = p.patient_id;
+FROM doctor d INNER JOIN doctor_patient dp ON d.doc_id = dp.doc_id INNER JOIN patients p ON dp.patient_id = p.patient_id;
 
 /*
  What is happening here is that we are first joining the first two tables using the doc_id PK
