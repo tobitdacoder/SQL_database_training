@@ -376,6 +376,14 @@ ON e.manager_id = em.employee_id;
 -- where the manager id in the first table maches the employee id in the second, this to show us which employees are also managers. 
 
 
+-- CHALLENGE THIRTY-ONE: (advanced join challenges)
+
+
+SELECT p.product_id, p.product_name, w.warehouse_id, w.warehouse_name, inv.quantity_on_hand
+FROM oes.products p INNER JOIN oes.inventories inv ON p.product_id = inv.product_id INNER JOIN oes.warehouses w ON inv.warehouse_id = w.warehouse_id
+WHERE w.warehouse_name is not NULL;
+
+
 
 
 --==========================================================================================================
