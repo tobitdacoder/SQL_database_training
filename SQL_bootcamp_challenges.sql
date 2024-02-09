@@ -369,7 +369,9 @@ GROUP BY e.department_id;
 
 -- CHALLENGE THIRTY: (on joins):
 
-
+SELECT e.employee_id, e.first_name, e.last_name, em.first_name AS manager_first_name, em.last_name AS manager_last_name 
+FROM hcm.employees e INNER JOIN hcm.employees em
+ON e.manager_id = em.employee_id;
 
 
 --==========================================================================================================
