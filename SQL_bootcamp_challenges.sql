@@ -372,6 +372,10 @@ GROUP BY e.department_id;
 SELECT e.employee_id, e.first_name, e.last_name, em.first_name AS manager_first_name, em.last_name AS manager_last_name 
 FROM hcm.employees e INNER JOIN hcm.employees em
 ON e.manager_id = em.employee_id;
+-- here we are using SELF-REFERENCING JOIN, by using the employee id as our new manager ID, we are basically returning the rows
+-- where the manager id in the first table maches the employee id in the second, this to show us which employees are also managers. 
+
+
 
 
 --==========================================================================================================
