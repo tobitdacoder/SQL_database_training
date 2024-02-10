@@ -410,6 +410,13 @@ GROUP BY category_name,product_name
 ORDER BY category_name,product_name;
 
 
+-- CHALLENGE THIRTY-FOUR: (advanced join challenges)
+
+SELECT pc.category_name,p.product_name, COALESCE(SUM(oi.quantity),0) AS total_order_per_product
+FROM oes.product_categories pc INNER JOIN oes.products p ON pc.category_id = p.category_id LEFT OUTER JOIN oes.order_items oi ON p.product_id = oi.product_id
+GROUP BY category_name,product_name
+ORDER BY category_name,product_name;
+
 -- here is one of the MOST difficult queries so far, so we are basically returning rows from different tables.
 --  and using different joins (make sure that your INNER JOINS don't influence the OUTER JOIN, here we started by using the OUTER JOIN then INNER JOINS later).
 
