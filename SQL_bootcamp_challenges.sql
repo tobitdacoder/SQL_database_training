@@ -409,6 +409,9 @@ FROM oes.product_categories pc INNER JOIN oes.products p ON pc.category_id = p.c
 GROUP BY category_name,product_name
 ORDER BY category_name,product_name;
 
+-- here is one of the MOST difficult queries so far, so we are basically returning rows from different tables.
+--  and using different joins (make sure that your INNER JOINS don't influence the OUTER JOIN, here we started by using the OUTER JOIN then INNER JOINS later).
+
 
 -- CHALLENGE THIRTY-FOUR: (advanced join challenges)
 
@@ -417,8 +420,11 @@ FROM oes.product_categories pc INNER JOIN oes.products p ON pc.category_id = p.c
 GROUP BY category_name,product_name
 ORDER BY category_name,product_name;
 
--- here is one of the MOST difficult queries so far, so we are basically returning rows from different tables.
---  and using different joins (make sure that your INNER JOINS don't influence the OUTER JOIN, here we started by using the OUTER JOIN then INNER JOINS later).
+-- here we are just making sure too return all the products, even the ones which are not sold yet,
+-- and we use the COALESCE function to eliminate NULLs and replace them with ZERO
+
+
+
 
 
 
