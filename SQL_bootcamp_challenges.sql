@@ -396,9 +396,12 @@ SELECT e.employee_id,
  j.job_title,
  e.state_province,
  c.country_name
-FROM hcm.employees e LEFT OUTER JOIN hcm.departments d ON e.department_id = d.department_id INNER JOIN hcm.jobs j ON e.job_id = j.job_id INNER JOIN hcm.countries c ON e.country_id = c.country_id
+FROM hcm.employees e LEFT OUTER JOIN hcm.departments d ON e.department_id = d.department_id 
+INNER JOIN hcm.jobs j ON e.job_id = j.job_id INNER JOIN hcm.countries c ON e.country_id = c.country_id
 WHERE c.country_name='Australia';
 
+-- here is one of the MOST difficult queries so far, so we are basically returning rows from different tables.
+--  and using different joins (make sure that your INNER JOINS don't influence the OUTER JOIN, here we started by using the OUTER JOIN then INNER JOINS later).
 
 --==========================================================================================================
 
