@@ -400,8 +400,23 @@ FROM hcm.employees e LEFT OUTER JOIN hcm.departments d ON e.department_id = d.de
 INNER JOIN hcm.jobs j ON e.job_id = j.job_id INNER JOIN hcm.countries c ON e.country_id = c.country_id
 WHERE c.country_name='Australia';
 
+
+-- CHALLENGE THIRTY-THREE: (advanced join challenges)
+
+
+SELECT pc.category_name,p.product_name, SUM(oi.quantity) AS total_order_per_product
+FROM oes.product_categories pc INNER JOIN oes.products p ON pc.category_id = p.category_id INNER JOIN oes.order_items oi ON p.product_id = oi.product_id
+GROUP BY category_name,product_name
+ORDER BY category_name,product_name;
+
+
 -- here is one of the MOST difficult queries so far, so we are basically returning rows from different tables.
 --  and using different joins (make sure that your INNER JOINS don't influence the OUTER JOIN, here we started by using the OUTER JOIN then INNER JOINS later).
+
+
+
+
+
 
 --==========================================================================================================
 
