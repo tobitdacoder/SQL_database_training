@@ -387,7 +387,17 @@ WHERE w.warehouse_name is not NULL;
    We are basically linking three tables using the INNER JOIN. make sure to undrstand what is going on after the FROM clause.
 */
 
+-- CHALLENGE THIRTY-TWO: (advanced join challenges)
 
+SELECT e.employee_id,
+ e.first_name,
+ e.last_name,
+ d.department_name,
+ j.job_title,
+ e.state_province,
+ c.country_name
+FROM hcm.employees e LEFT OUTER JOIN hcm.departments d ON e.department_id = d.department_id INNER JOIN hcm.jobs j ON e.job_id = j.job_id INNER JOIN hcm.countries c ON e.country_id = c.country_id
+WHERE c.country_name='Australia';
 
 
 --==========================================================================================================
