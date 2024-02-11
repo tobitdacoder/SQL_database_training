@@ -467,7 +467,16 @@ UNION
 SELECT observation_id, 'NULL' AS common_name, scientific_name, locality, sighting_datetime
 FROM bird.florida_sightings; --> here we are basically unifying not two but THREEn tables, following the rules specified earlier. 
 
+-- NOTE 
 
+SELECT scientific_name, 'California' AS state_name 
+FROM bird.california_sightings
+UNION
+SELECT scientific_name, 'Arizona' AS state_name
+FROM bird.arizona_sightings
+ORDER BY state_name,scientific_name;
+--> THIS CAN BE USED WHEN WE WANT THE State_name for california_sightings to be california and 
+--> same thing applied to arizona.
 
 --==========================================================================================================
 
