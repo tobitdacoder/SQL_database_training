@@ -451,6 +451,8 @@ UNION
 SELECT scientific_name, sighting_location AS state_name 
 FROM bird.arizona_sightings
 ORDER BY state_name,scientific_name; --> here we have added an ORDER BY clause to order the retrieved table.
+                                     --> here we are now using the ORDER BY clause to retrieve the rows when
+                                     --> they are already ordered. NOTICE that we have used two columns to order properly.
 
 
 
