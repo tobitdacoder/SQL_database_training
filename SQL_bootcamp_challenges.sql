@@ -455,10 +455,17 @@ ORDER BY state_name,scientific_name; --> here we have added an ORDER BY clause t
                                      --> they are already ordered. NOTICE that we have used two columns to order properly.
 
 
+-- CHALLENGE THIRTY-EIGHT: (advanced join challenges)
 
 
-
-
+SELECT sighting_id, common_name, scientific_name, location_of_sighting as state_name, sighting_date
+FROM bird.california_sightings
+UNION
+SELECT sighting_id, common_name, scientific_name, sighting_location, sighting_date
+FROM bird.arizona_sightings
+UNION
+SELECT observation_id, 'NULL' AS common_name, scientific_name, locality, sighting_datetime
+FROM bird.florida_sightings;
 
 
 --==========================================================================================================
