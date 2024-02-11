@@ -430,7 +430,9 @@ SELECT sighting_id, common_name, scientific_name, location_of_sighting, sighting
 FROM bird.california_sightings
 UNION ALL
 SELECT sighting_id, common_name, scientific_name, sighting_location, sighting_date
-FROM bird.arizona_sightings;
+FROM bird.arizona_sightings; -- this query will return an UNNITED table if the two linked tables
+                             -- here we used the UNION ALL, which means that even the duplicates
+                             -- combinations (equal rows) can be retrieved if they are there.
 
 
 
