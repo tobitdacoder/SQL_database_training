@@ -581,5 +581,7 @@ ON e.manager_id = e2.employee_id;
 SELECT s.store_id, s.store_location, p.product_id, p.product_name
 FROM stores s CROSS JOIN products p;
 
+-- TO GET ALL THE META DATA ABOUT ANY TABLE, YOU JUST DO LIKE THIS:
 
-
+-- describe table_name;  eg:
+describe bird.arizona_sightings;
