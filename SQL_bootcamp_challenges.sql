@@ -465,7 +465,8 @@ SELECT sighting_id, common_name, scientific_name, sighting_location, sighting_da
 FROM bird.arizona_sightings
 UNION
 SELECT observation_id, 'NULL' AS common_name, scientific_name, locality, sighting_datetime
-FROM bird.florida_sightings;
+FROM bird.florida_sightings; --> here we are basically unifying not two but THREEn tables, following the rules specified earlier. 
+
 
 
 --==========================================================================================================
