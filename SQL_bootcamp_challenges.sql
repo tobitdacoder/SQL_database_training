@@ -435,6 +435,13 @@ FROM bird.arizona_sightings; -- this query will return an UNNITED table if the t
                              -- combinations (equal rows) can be retrieved if they are there.
 
 
+-- CHALLENGE THIRTY-SIX: (advanced join challenges)
+
+SELECT sighting_id, common_name, scientific_name, location_of_sighting, sighting_date
+FROM bird.california_sightings
+UNION 
+SELECT sighting_id, common_name, scientific_name, sighting_location, sighting_date
+FROM bird.arizona_sightings;
 
 
 
