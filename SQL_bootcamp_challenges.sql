@@ -584,4 +584,5 @@ FROM stores s CROSS JOIN products p;
 -- TO GET ALL THE META DATA ABOUT ANY TABLE, YOU JUST DO LIKE THIS:
 
 -- describe table_name;  eg:
-describe bird.arizona_sightings;
+describe bird.arizona_sightings; 
+--> Here we have just seen how we can retrieve all the meta data about any table in case we want to use them for a specific purpose.
