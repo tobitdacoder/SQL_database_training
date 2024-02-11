@@ -443,6 +443,16 @@ UNION
 SELECT sighting_id, common_name, scientific_name, sighting_location, sighting_date
 FROM bird.arizona_sightings;
 
+-- CHALLENGE THIRTY-SEVEN: (advanced join challenges)
+
+SELECT scientific_name, location_of_sighting AS state_name 
+FROM bird.california_sightings
+UNION
+SELECT scientific_name, sighting_location AS state_name 
+FROM bird.arizona_sightings
+ORDER BY state_name,scientific_name; --> here we have added an ORDER BY clause to order the retrieved table.
+
+
 
 
 
