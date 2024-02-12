@@ -626,5 +626,11 @@ SELECT product_id, category, price
 FROM products
 WHERE price = (SELECT MAX(price)
                FROM products);
-
 -- this is how we use a self contained subquery.
+
+
+SELECT product_id, category, price
+FROM products
+WHERE product_id IN (SELECT product_id
+                     FROM order_details);
+-- and this is how we can return many rows, using the IN clause.
