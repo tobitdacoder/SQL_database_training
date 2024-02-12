@@ -601,6 +601,9 @@ describe bird.arizona_sightings;
 
 -- UNION and UNION ALL set operators
 
+ --to UNION these two tables which have the same number of
+ -- columns and same types of columns BUT from different tables, we do this
+
 SELECT first_name, last_name, email
 FROM customers
 UNION
