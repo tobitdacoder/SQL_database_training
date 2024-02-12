@@ -613,8 +613,18 @@ FROM canadian_subscribers;
 -- we can also order by the result:
 
 SELECT first_name, last_name, email
-FROM cutomers
+FROM customers
 UNION
 SELECT first_name, last_name, email_adress
 FROM canadian_subscribers
 ORDER BY email;   --[we are using the column names of the first table coz they dominate]
+
+
+-- SELF-CONTAINED SUBQUERIES:
+
+SELECT product_id, category, price 
+FROM products
+WHERE price = (SELECT MAX(price)
+               FROM products);
+
+-- this is how we use a self contained subquery.
