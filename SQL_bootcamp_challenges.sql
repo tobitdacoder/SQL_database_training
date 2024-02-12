@@ -599,3 +599,10 @@ FROM stores s CROSS JOIN products p;
 describe bird.arizona_sightings; 
 --> Here we have just seen how we can retrieve all the meta data about any table in case we want to use them for a specific purpose.
 
+-- UNION and UNION ALL set operators
+
+SELECT first_name, last_name, email
+FROM customers
+UNION
+SELECT first_name, last_name, email_adress
+FROM canadian_subscribers;
