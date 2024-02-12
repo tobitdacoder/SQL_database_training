@@ -478,6 +478,7 @@ ORDER BY state_name,scientific_name;
 --> THIS CAN BE USED WHEN WE WANT THE State_name for california_sightings to be california and 
 --> same thing applied to arizona.
 
+
 --==========================================================================================================
 
 
@@ -485,6 +486,8 @@ ORDER BY state_name,scientific_name;
 
 
 -- EXERCICE on the Logical query Processing Order:
+
+
 
 -- Write a query that returns the average price for product categories that have an average price greater
 -- than $20. Exclude any products which have a category of “unassigned”. Order the query result by average.
@@ -595,3 +598,4 @@ FROM stores s CROSS JOIN products p;
 -- describe table_name;  eg:
 describe bird.arizona_sightings; 
 --> Here we have just seen how we can retrieve all the meta data about any table in case we want to use them for a specific purpose.
+
