@@ -642,3 +642,11 @@ FROM product p1
 WHERE price = (SELECT MAX(price)
      FROM product p2
      WHERE p2.category = p1.category);
+
+/*
+basically, when the subquery processes row by row ( the rows inside the outer table or table p1),
+ it is going to return the maximum price where the category is “commodity” from the inner table.
+  If we look at all the rows where the category is equal to commodity,
+    we can say that the highest price is 51 . THE SUBQUERY WILL PROCESS THE ROW OF THE PRINCIPAL
+     TABLE AND RETURN THE MAX PRICE FOR EACH CATEGORY.
+*/
