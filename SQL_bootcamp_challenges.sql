@@ -634,3 +634,11 @@ FROM products
 WHERE product_id IN (SELECT product_id
                      FROM order_details);
 -- and this is how we can return many rows, using the IN clause.
+
+-- CORRELATED SUBQUERIES:
+
+SELECT product_id, category, price
+FROM product p1
+WHERE price = (SELECT MAX(price)
+     FROM product p2
+     WHERE p2.category = p1.category);
