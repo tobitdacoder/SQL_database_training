@@ -650,3 +650,12 @@ basically, when the subquery processes row by row ( the rows inside the outer ta
     we can say that the highest price is 51 . THE SUBQUERY WILL PROCESS THE ROW OF THE PRINCIPAL
      TABLE AND RETURN THE MAX PRICE FOR EACH CATEGORY.
 */
+
+-- This 👇🏽 is another way of writing the same query, but this time using JOINS.
+
+SELECT p1.product_id, p1.category, p1.price
+FROM product p1
+INNER JOIN (SELECT category, MAX(price) as max_cat_price
+           FROM products
+           GROUP BY category) p2
+ON p1.category = p2.category AND p1.price = p2.max_cat_price;
