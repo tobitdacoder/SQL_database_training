@@ -685,3 +685,16 @@ SELECT
 	price,
 	RANK() OVER(PARTITION BY category ORDER BY price DESC) AS rnk
  FROM products;
+
+ -- here is how we specify what rows, based on the rank, need to be returned:
+ SELECT s.*
+FROM (SELECT product_id,
+                Category,
+                 price,
+	                RANK() OVER (PARTITION BY category ORDER BY price DESC) AS rnk
+  FROM products) s
+WHERE s.rnk=1;
+
+-- here you can tell that we are filtering to get the rows with RANK one.
+-- we used Parenthhesis becauae we want the code inside the first FROM to
+--  run and create the derived table from which we are going to get the rank 1 rows
