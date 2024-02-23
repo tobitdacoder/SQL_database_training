@@ -672,4 +672,16 @@ WHERE EXISTS (SELECT *
 here is how we use the EXISTS operator. IT is simply returning
  either TRUE or FALSE. and depending on the row we are at, 
  if the EXISTS returns TRUE, then that row is returned.
+
+[also check ROW by ROW, to see if the product_id of the
+ selected row exists or is equal to any product_id in the order table.]
 */
+
+-- INTRO TO WINDOW FUNCTIONS: DELETE
+
+SELECT 
+	product_id,
+	category,
+	price,
+	RANK() OVER(PARTITION BY category ORDER BY price DESC) AS rnk
+ FROM products;
