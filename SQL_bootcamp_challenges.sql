@@ -659,3 +659,11 @@ INNER JOIN (SELECT category, MAX(price) as max_cat_price
            FROM products
            GROUP BY category) p2
 ON p1.category = p2.category AND p1.price = p2.max_cat_price;
+
+-- HERE IS HOW WE USE THE EXISTS operator.
+
+Select p.product_id, p.category, p.price
+From products p
+WHERE EXISTS (SELECT *
+      FROM order_details o
+      WHERE o.product_id=p.product_id);
