@@ -667,3 +667,9 @@ From products p
 WHERE EXISTS (SELECT *
       FROM order_details o
       WHERE o.product_id=p.product_id);
+
+/*
+here is how we use the EXISTS operator. IT is simply returning
+ either TRUE or FALSE. and depending on the row we are at, 
+ if the EXISTS returns TRUE, then that row is returned.
+*/
