@@ -698,3 +698,39 @@ WHERE s.rnk=1;
 -- here you can tell that we are filtering to get the rows with RANK one.
 -- we used Parenthhesis becauae we want the code inside the first FROM to
 --  run and create the derived table from which we are going to get the rank 1 rows
+
+-- INTRO TO CTEs(Common Table Expression):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
