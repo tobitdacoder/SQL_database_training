@@ -529,6 +529,15 @@ WHERE s.price_rank=1;
 here we are doing the same thing as the previous one, but now we are using CTEs (common table expressions). 
 */
 
+-- CHALLENGE FORTY-THREE: (SUBQUERY CHALLENGES)
+
+select p1.employee_id, p1.first_name, p1.last_name
+from hcm.employees p1
+where p1.employee_id NOT IN (SELECT p2.employee_id
+							 FROM oes.orders p2
+                             WHERE p2.employee_id is not null);
+
+                             
 
 
 
