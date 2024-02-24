@@ -537,9 +537,15 @@ where p1.employee_id NOT IN (SELECT p2.employee_id
 							 FROM oes.orders p2
                              WHERE p2.employee_id is not null);
 
-                             
 
 
+-- CHALLENGE FORTY-FOUR: (SUBQUERY CHALLENGES)
+
+SELECT p1.employee_id, p1.first_name, p1.last_name
+FROM hcm.employees p1
+where NOT EXISTS (SELECT p2.employee_id
+				  FROM oes.orders p2
+                  WHERE p2.employee_id=p1.employee_id);
 
 
 
