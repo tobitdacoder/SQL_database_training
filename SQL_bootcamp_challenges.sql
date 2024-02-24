@@ -486,6 +486,16 @@ WHERE p1.list_price=(select min(p2.list_price)
 				  from oes.products p2);
 
 
+-- CHALLENGE FORTY: (SUBQUERY CHALLENGES)
+
+SELECT p1.product_id, p1.product_name, p1.list_price, p1.category_id 
+FROM oes.products p1
+WHERE list_price=(SELECT min(p2.list_price)
+				  FROM oes.products p2
+                  WHERE p2.category_id = p1.category_id)
+order by p1.category_id asc;
+-- working in a ROW by ROW fashion.
+
 
 
 
