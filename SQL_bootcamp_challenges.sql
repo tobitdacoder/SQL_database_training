@@ -496,6 +496,13 @@ WHERE list_price=(SELECT min(p2.list_price)
 order by p1.category_id asc;
 -- working in a ROW by ROW fashion.
 
+-- ANOTHER WAY OF DOING THE SAME THING IS HERE DOWN (using joins)
+
+SELECT p1.product_id, p1.product_name, p1.list_price, p1.category_id 
+FROM oes.products p1 INNER JOIN  (SELECT category_id,min(list_price) as min_price_per_cat
+								  FROM oes.products
+								  GROUP BY category_id) p2
+ON p1.category_id=p2.category_id AND p1.list_price=p2.min_price_per_cat;
 
 
 
