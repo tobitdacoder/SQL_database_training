@@ -525,6 +525,10 @@ SELECT s.*
 FROM my_table s
 WHERE s.price_rank=1;
 
+/*
+here we are doing the same thing as the previous one, but now we are using CTEs (common table expressions). 
+*/
+
 
 
 
