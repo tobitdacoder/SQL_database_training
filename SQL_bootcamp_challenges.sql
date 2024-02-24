@@ -560,7 +560,14 @@ FROM oes.orders o1 INNER JOIN oes.order_items oi1
 ON o1.order_id = oi1.order_id INNER JOIN oes.products p1 ON oi1.product_id=p1.product_id
 WHERE p1.product_name='PBX Smart Watch 4');
 
-
+-- THE SUBQUERY FIRST THAT WE GONNA USE IN THE UPPER FINAL...
+/*
+-- SELECT o1.customer_id, o1.order_id, oi1.product_id,p1.product_name
+SELECT o1.customer_id
+FROM oes.orders o1 INNER JOIN oes.order_items oi1
+ON o1.order_id = oi1.order_id INNER JOIN oes.products p1 ON oi1.product_id=p1.product_id
+WHERE p1.product_name='PBX Smart Watch 4';
+*/
 
 
 
