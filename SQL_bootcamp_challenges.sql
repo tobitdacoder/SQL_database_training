@@ -445,12 +445,23 @@ FROM bird.arizona_sightings;
 
 -- CHALLENGE THIRTY-SEVEN: (advanced join challenges)
 
-SELECT scientific_name, location_of_sighting AS state_name 
+-- NOTE 
+
+SELECT scientific_name, 'California' AS state_name 
+FROM bird.california_sightings
+UNION
+SELECT scientific_name, 'Arizona' AS state_name
+FROM bird.arizona_sightings
+ORDER BY state_name,scientific_name;
+--> THIS CAN BE USED WHEN WE WANT THE State_name for california_sightings to be california and 
+--> same thing applied to arizona.
+
+/*SELECT scientific_name, location_of_sighting AS state_name 
 FROM bird.california_sightings
 UNION
 SELECT scientific_name, sighting_location AS state_name 
 FROM bird.arizona_sightings
-ORDER BY state_name,scientific_name; --> here we have added an ORDER BY clause to order the retrieved table.
+ORDER BY state_name,scientific_name;*/ --> here we have added an ORDER BY clause to order the retrieved table.
                                      --> here we are now using the ORDER BY clause to retrieve the rows when
                                      --> they are already ordered. NOTICE that we have used two columns to order properly.
 
@@ -467,16 +478,49 @@ UNION
 SELECT observation_id, 'NULL' AS common_name, scientific_name, locality, sighting_datetime
 FROM bird.florida_sightings; --> here we are basically unifying not two but THREEn tables, following the rules specified earlier. 
 
--- NOTE 
+-- CHALLENGE THIRTY-NINE: (SUBQUERY CHALLENGES)
 
-SELECT scientific_name, 'California' AS state_name 
-FROM bird.california_sightings
-UNION
-SELECT scientific_name, 'Arizona' AS state_name
-FROM bird.arizona_sightings
-ORDER BY state_name,scientific_name;
---> THIS CAN BE USED WHEN WE WANT THE State_name for california_sightings to be california and 
---> same thing applied to arizona.
+SELECT p1.product_id, p1.product_name, p1.list_price, p1.category_id
+FROM oes.products p1
+WHERE p1.list_price=(select min(p2.list_price)
+				  from oes.products p2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 --==========================================================================================================
