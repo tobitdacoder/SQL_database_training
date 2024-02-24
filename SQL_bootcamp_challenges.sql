@@ -547,7 +547,8 @@ where NOT EXISTS (SELECT p2.employee_id
 				  FROM oes.orders p2
                   WHERE p2.employee_id=p1.employee_id);
 
-
+-- here we are now DOING THE SAME THING AS THE PREVIOUS CHALLENGE,
+-- but we are now using the NOT EXISTS. 
 
 
 
