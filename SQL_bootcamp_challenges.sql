@@ -514,6 +514,17 @@ SELECT s.*
 FROM my_table s
 WHERE s.price_rank=1;
 
+-- CHALLENGE FORTY-TWO: (SUBQUERY CHALLENGES)
+
+WITH my_table 
+AS (SELECT p1.product_id, p1.product_name, p1.list_price, p1.category_id, p2.category_name, 
+			 RANK() OVER(partition by p1.category_id order by p1.list_price asc) as price_rank
+	  FROM oes.products p1 INNER JOIN oes.product_categories p2
+      ON p1.category_id=p2.category_id)
+SELECT s.*
+FROM my_table s
+WHERE s.price_rank=1;
+
 
 
 
