@@ -504,7 +504,15 @@ FROM oes.products p1 INNER JOIN  (SELECT category_id,min(list_price) as min_pric
 								  GROUP BY category_id) p2
 ON p1.category_id=p2.category_id AND p1.list_price=p2.min_price_per_cat;
 
+-- CHALLENGE FORTY-ONE: (SUBQUERY CHALLENGES)
 
+WITH my_table 
+AS (SELECT product_id, product_name, list_price, category_id, 
+			 RANK() OVER(partition by category_id order by list_price asc) as price_rank
+	  FROM oes.products)
+SELECT s.*
+FROM my_table s
+WHERE s.price_rank=1;
 
 
 
