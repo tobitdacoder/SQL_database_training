@@ -550,6 +550,16 @@ where NOT EXISTS (SELECT p2.employee_id
 -- here we are now DOING THE SAME THING AS THE PREVIOUS CHALLENGE,
 -- but we are now using the NOT EXISTS. 
 
+-- CHALLENGE FORTY-FIVE: (SUBQUERY CHALLENGES)
+
+SELECT c.customer_id, c.first_name, c.last_name, c.email
+FROM oes.customers c 
+WHERE c.customer_id IN (-- SELECT o1.customer_id, o1.order_id, oi1.product_id,p1.product_name
+SELECT o1.customer_id
+FROM oes.orders o1 INNER JOIN oes.order_items oi1
+ON o1.order_id = oi1.order_id INNER JOIN oes.products p1 ON oi1.product_id=p1.product_id
+WHERE p1.product_name='PBX Smart Watch 4');
+
 
 
 
