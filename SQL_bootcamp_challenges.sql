@@ -852,6 +852,19 @@ SELECT customer_id,
    first_name || last_name AS full_name
 FROM customers;
 
+-- to put space between the two names, we do this:
+
+SET SESSION sql_mode = 'PIPES_AS_CONCAT';
+
+SELECT customer_id,
+ 	   First_name,
+   Last_name,
+   first_name ||''|| last_name AS full_name
+FROM customers;
+-- we simply add the space between the two pipes.
+
+
+
 
 
 
