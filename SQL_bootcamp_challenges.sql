@@ -821,7 +821,7 @@ WHERE s.rnk=1;
 WITH not_recently_contacted 
 AS (SELECT contact_id, contact_name, last_contacted, account_id
        FROM dbo.account_contacts --> here we are using the dbo database.
-       WHERE last_contacted < '20200101') ,  – > here is the comma ‘,’ separating them
+       WHERE last_contacted < '20200101') ,  --> here is the comma ‘,’ separating them
  	old_orders 
 AS (SELECT order_id, account_id, order_date
        FROM dbo.orders --> here we are using the dbo database, same thing earlier
@@ -832,7 +832,13 @@ WHERE EXISTS (SELECT *
        FROM ord_orders oo
        WHERE nrc.account_id=oo.account_id);
 
+-- AVOIDING THE NOT IN TRAP:
 
+SELECT *
+FROM departments
+WHERE department_id NOT IN (SELECT department_id
+							FROM employees
+							WHERE department_id IS NOT NULL);
 
 
 
