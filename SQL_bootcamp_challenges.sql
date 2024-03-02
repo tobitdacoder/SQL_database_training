@@ -840,6 +840,18 @@ WHERE department_id NOT IN (SELECT department_id
 							FROM employees
 							WHERE department_id IS NOT NULL);
 
+-- we simply add the IS NOT NULL condition.
+
+-- CONCATENATION IN MySQL:
+
+SET SESSION sql_mode = 'PIPES_AS_CONCAT';
+
+SELECT customer_id,
+ 	   First_name,
+   Last_name,
+   first_name || last_name AS full_name
+FROM customers;
+
 
 
 
