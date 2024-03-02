@@ -874,6 +874,12 @@ SELECT first_name,
 	   first_name || coalesce( ' ' || middle_name, ' ') || ' ' || last_name AS full_name
 FROM customers;
 
+-- WE can also use the CONCAT() function to do the same thing:
+
+SELECT first_name, liddle_name, last_name, 
+   CONCAT(first_name, ' ', COALESCE(middle_name, ' '), last_name) AS full_name 
+FROM customers;
+
 
 
 
