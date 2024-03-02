@@ -863,7 +863,16 @@ SELECT customer_id,
 FROM customers;
 -- we simply add the space between the two pipes.
 
+-- THEN IF IT IS CONCATENATING MORE THAN TWO, and to avoid the NULL,
+-- we use the COALESCE() FUNCTION HERE:
 
+set session sql_mode ='pipes_as_concat'
+
+SELECT first_name,
+	   middle_name, 
+	   last_name, 
+	   first_name || coalesce( ' ' || middle_name, ' ') || ' ' || last_name AS full_name
+FROM customers;
 
 
 
