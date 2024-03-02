@@ -880,6 +880,12 @@ SELECT first_name, liddle_name, last_name,
    CONCAT(first_name, ' ', COALESCE(middle_name, ' '), last_name) AS full_name 
 FROM customers;
 
+-- we can then correct the double space by mixing CONCAT and PIPES:
+SET session sql_mode = 'pipes_as_concat'
+
+SELECT first_name, liddle_name, last_name, 
+   CONCAT(first_name, COALESCE(' ' || middle_name, ' '), last_name) AS full_name 
+FROM customers;
 
 
 
