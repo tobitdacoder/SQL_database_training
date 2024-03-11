@@ -560,6 +560,45 @@ FROM oes.orders o1 INNER JOIN oes.order_items oi1
 ON o1.order_id = oi1.order_id INNER JOIN oes.products p1 ON oi1.product_id=p1.product_id
 WHERE p1.product_name='PBX Smart Watch 4');
 
+
+
+
+-- HOW TO SET DEFAULT FEE CHANGE FOR IT STUDENT using TRIGGERS;
+
+
+/*
+
+-- Create the table
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    student_type ENUM('IT', 'Computer Science'),
+    fee DECIMAL(10, 2)
+);
+
+-- Set default value for fee
+ALTER TABLE students
+MODIFY COLUMN fee DECIMAL(10, 2) DEFAULT 0.00;
+
+-- Create the trigger
+DELIMITER $$
+CREATE TRIGGER adjust_fee
+BEFORE INSERT ON students
+FOR EACH ROW
+BEGIN
+    IF NEW.student_type = 'IT' THEN
+        SET NEW.fee = NEW.fee * 0.88; -- Reduce fee by 12%
+    END IF;
+END$$
+DELIMITER ;
+
+*/
+
+
+
+
+
+
 -- THE SUBQUERY FIRST THAT WE GONNA USE IN THE UPPER FINAL...
 /*
 -- SELECT o1.customer_id, o1.order_id, oi1.product_id,p1.product_name
@@ -596,7 +635,7 @@ WHERE p1.product_name='PBX Smart Watch 4';
 
 
 
---==========================================================================================================
+-- ==========================================================================================================
 
 
 
@@ -646,7 +685,7 @@ GROUP BY occupied;
 
 -- COMPOSITE JOIN: Joining on multiple columns
 
-SELECT c.population, c.city, c.country, s.country, AS store_country, s.store_id, s.area_sqm
+SELECT c.population, c.city, c.country, s.country AS store_country, s.store_id, s.area_sqm
 FROM cities c INNER JOIN stores s
 ON c.city = s.city AND c.country = s.country;
 
@@ -714,11 +753,11 @@ FROM stores s CROSS JOIN products p;
 
 -- describe table_name;  eg:
 describe bird.arizona_sightings; 
---> Here we have just seen how we can retrieve all the meta data about any table in case we want to use them for a specific purpose.
+-- > Here we have just seen how we can retrieve all the meta data about any table in case we want to use them for a specific purpose.
 
 -- UNION and UNION ALL set operators
 
- --to UNION these two tables which have the same number of
+ -- to UNION these two tables which have the same number of
  -- columns and same types of columns BUT from different tables, we do this
 
 SELECT first_name, last_name, email
@@ -734,7 +773,7 @@ FROM customers
 UNION
 SELECT first_name, last_name, email_adress
 FROM canadian_subscribers
-ORDER BY email;   --[we are using the column names of the first table coz they dominate]
+ORDER BY email;   -- [we are using the column names of the first table coz they dominate]
 
 
 -- SELF-CONTAINED SUBQUERIES:
@@ -820,11 +859,11 @@ WHERE s.rnk=1;
 
 WITH not_recently_contacted 
 AS (SELECT contact_id, contact_name, last_contacted, account_id
-       FROM dbo.account_contacts --> here we are using the dbo database.
-       WHERE last_contacted < '20200101') ,  --> here is the comma ‘,’ separating them
+       FROM dbo.account_contacts -- > here we are using the dbo database.
+       WHERE last_contacted < '20200101') ,  -- > here is the comma ‘,’ separating them
  	old_orders 
 AS (SELECT order_id, account_id, order_date
-       FROM dbo.orders --> here we are using the dbo database, same thing earlier
+       FROM dbo.orders -- > here we are using the dbo database, same thing earlier
        WHERE order_date < '20200101')
 SELECT nrc.contact_name, nrc.last_contacted, nrc.account_id
 FROM not_recently_contacted nrc
@@ -866,7 +905,7 @@ FROM customers;
 -- THEN IF IT IS CONCATENATING MORE THAN TWO, and to avoid the NULL,
 -- we use the COALESCE() FUNCTION HERE:
 
-set session sql_mode ='pipes_as_concat'
+set session sql_mode ='pipes_as_concat';
 
 SELECT first_name,
 	   middle_name, 
@@ -881,16 +920,20 @@ SELECT first_name, liddle_name, last_name,
 FROM customers;
 
 -- we can then correct the double space by mixing CONCAT and PIPES:
+/*
 SET session sql_mode = 'pipes_as_concat'
 
-SELECT first_name, liddle_name, last_name, 
+SELECT first_name, middle_name, last_name, 
    CONCAT(first_name, COALESCE(' ' || middle_name, ' '), last_name) AS full_name 
 FROM customers;
+*/
 
--- STRING MANIPULATION:
+-- SEPARATED CHALLENGE FOR UNIQUE CONSTRAINT:
 
+ALTER TABLE hcm.departments ADD CONSTRAINT unique_dept UNIQUE (department_name);
 
-
+-- how to drop the constraint using the constraint
+alter table hcm.departments drop constraint unique_dept;
 
 
 
