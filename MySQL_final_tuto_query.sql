@@ -1,13 +1,35 @@
-create database final;
-
--- use final;  this code is used to help us not always specify the db in the code we are writing
--- since we are already usingthe database (we are in the database)
-
-select database();
-
-create table pastries (
-name varchar(50),
-quantity int
+create table cats(
+cat_id int auto_increment,
+name varchar(100),
+breed varchar(100),
+age int,
+CONSTRAINT pk_cats  primary key(cat_id)
 );
 
-desc pastries;
+drop table cats;
+
+INSERT INTO cats(name, breed, age) 
+VALUES ('Ringo', 'Tabby', 4),
+       ('Cindy', 'Maine Coon', 10),
+       ('Dumbledore', 'Maine Coon', 11),
+       ('Egg', 'Persian', 4),
+       ('Misty', 'Tabby', 13),
+       ('George Michael', 'Ragdoll', 9),
+       ('Jackson', 'Sphynx', 7);
+       
+select cat_id from cats;
+
+select name, breed
+from cats;
+
+select name, age 
+from cats
+where breed = 'tabby';
+
+select cat_id, age
+from cats
+where cat_id=age;
+
+update cats
+set age=14
+where name='misty';
