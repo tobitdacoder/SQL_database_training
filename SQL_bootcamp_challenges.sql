@@ -928,12 +928,16 @@ SELECT first_name, middle_name, last_name,
 FROM customers;
 */
 
--- SEPARATED CHALLENGE FOR UNIQUE CONSTRAINT:
+-- SEPARATED CHALLENGES:
 
 ALTER TABLE hcm.departments ADD CONSTRAINT unique_dept UNIQUE (department_name);
 
 -- how to drop the constraint using the constraint
 alter table hcm.departments drop constraint unique_dept;
+
+ALTER TABLE hcm.employees ADD CONSTRAINT chk_emp_sal CHECK(salary >= 0); 
+
+
 
 
 
